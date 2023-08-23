@@ -424,7 +424,8 @@ int main(){
 	    //inicio das opçoes
  	    printf(" # 1- Fazer registro \n"); 
 	    printf(" # 2- Consultar registro \n"); 
-	    printf(" # 3- Deletar registro \n\n"); 
+	    printf(" # 3- Deletar registro \n"); 
+	    printf(" # 4- Sair \n"); 
 	    //fim das opçoes
 	     
 	    printf(" Opção: ");
@@ -445,6 +446,12 @@ int main(){
 	 	   
 	 	    case 3:
 	 	    	deletar();
+	 	    break;
+	 	    
+	 	    case 4:
+	 	    	printf("\n ---{ Cartório de Registros }--- \n"); 
+	 	    	printf("\n Obrigado por ultilizar o sitema! \n\n");
+	 	    	return 0;
 	 	    break;
 	 	    
 	 	    //default igual a "se não"
