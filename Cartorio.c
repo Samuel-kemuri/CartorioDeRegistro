@@ -412,60 +412,86 @@ int main(){
 	
 	int opcao=0;
 	int laco=1;
+	char senha[10];
+	int comparacao;
 	
-	for(laco=1;laco=1;){
+	setlocale(LC_ALL, "Portuguese"); //Definindo os caracteris da linguagem portuguesa-br
+	
+	system("cls"); //limpar chat
+	
+	printf("\n ---{ Cartório de Registros }--- \n");
+	printf("\n Bem-vindo(a) ao nosso sitema de registro! \n");
+	printf(" Porfavor digite a senha para começarmos! \n");
+	printf("\n SENHA: ");
+	scanf("%s", &senha);
+	
+	comparacao = strcmp(senha, "admin");
+	
+	if(comparacao == 0){
 		
+		for(laco=1;laco=1;){
+			
+			system("cls"); //limpar chat
+		 
+		    printf("\n ---{ Cartório de Registros }--- \n"); //Cabesario da aplicação
+		    printf("\n Escolha a opção desejada: \n\n"); //Escolha de Opçoes
+		    
+		    //inicio das opçoes
+	 	    printf(" # 1- Fazer registro \n"); 
+		    printf(" # 2- Consultar registro \n"); 
+		    printf(" # 3- Deletar registro \n"); 
+		    printf(" # 4- Sair do sistema \n\n"); 
+		    //fim das opçoes
+		     
+		    printf(" Opção: ");
+		    scanf("%d", &opcao); //armazenando a escolha do ususario 
+		 
+		    system("cls"); //limpar chat
+		    
+		    //inicio de ecolha
+		    switch(opcao){
+		    	
+		    	case 1: 
+			   		registro();
+		 	    break;
+		 	   
+		 	    case 2:
+		 	    	consultar();
+		 	    break;
+		 	   
+		 	    case 3:
+		 	    	deletar();
+		 	    break;
+		 	    
+		 	    case 4:
+		 	    	printf("\n ---{ Cartório de Registros }--- \n"); 
+		 	    	printf("\n Obrigado por ultilizar o sitema! \n");
+		 	    	return 0;
+		 	    break;
+		 	    
+		 	    //default igual a "se não"
+		 	    default: 
+		 	    	printf("\n ---{ Cartório de Registros }--- \n");
+					printf("\n Essa opção não existe! \n"); 
+		 	    	printf("\n");
+		 	    	system("pause");
+		 	    break;
+		 	   	  
+		    }
+		    //fim de ecolha
+		    
+	   }
+	} 
+	
+	else{
 		system("cls"); //limpar chat
 		
-	    setlocale(LC_ALL, "Portuguese"); //Definindo os caracteris da linguagem portuguesa-br
-	 
-	    printf("\n ---{ Cartório de Registros }--- \n"); //Cabesario da aplicação
-	    printf("\n Escolha a opção desejada: \n\n"); //Escolha de Opçoes
-	    
-	    //inicio das opçoes
- 	    printf(" # 1- Fazer registro \n"); 
-	    printf(" # 2- Consultar registro \n"); 
-	    printf(" # 3- Deletar registro \n"); 
-	    printf(" # 4- Sair do sistema \n\n"); 
-	    //fim das opçoes
-	     
-	    printf(" Opção: ");
-	    scanf("%d", &opcao); //armazenando a escolha do ususario 
-	 
-	    system("cls"); //limpar chat
-	    
-	    //inicio de ecolha
-	    switch(opcao){
-	    	
-	    	case 1: 
-		   		registro();
-	 	    break;
-	 	   
-	 	    case 2:
-	 	    	consultar();
-	 	    break;
-	 	   
-	 	    case 3:
-	 	    	deletar();
-	 	    break;
-	 	    
-	 	    case 4:
-	 	    	printf("\n ---{ Cartório de Registros }--- \n"); 
-	 	    	printf("\n Obrigado por ultilizar o sitema! \n");
-	 	    	return 0;
-	 	    break;
-	 	    
-	 	    //default igual a "se não"
-	 	    default: 
-	 	    	printf("\n ---{ Cartório de Registros }--- \n");
-				printf("\n Essa opção não existe! \n"); 
-	 	    	printf("\n");
-	 	    	system("pause");
-	 	    break;
-	 	   	  
-	    }
-	    //fim de ecolha
-	    
-   }
-	    
+		printf("\n ---{ Cartório de Registros }--- \n");
+		printf("\n SENHA INCORRETA! \n");
+		printf("\n Tente novamente! \n\n");
+	
+		system("pause");
+		main();
+		
+    }
 }
