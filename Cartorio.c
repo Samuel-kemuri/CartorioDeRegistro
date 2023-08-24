@@ -134,7 +134,7 @@ int registro(){
 	 
 	// laucher pergutando se quer outro registro
 	printf("\n ---{ Registro }--- \n"); //Cabesario da aplicação
-	printf("\n Desejada fazer outro registro: \n"); //Escolha de Opçoes
+	printf("\n Desejada fazer outro registro? \n\n"); //Escolha de Opçoes
 	
 	printf(" # 1- Fazer outro registro \n"); 
 	printf(" # 2- Voltar ao menu \n\n");
@@ -153,14 +153,14 @@ int registro(){
 		   
 	    case 2:
 	     	main();
-	 	 break;
+	 	break;
 	 	   
-	 	 default: 
+	 	default: 
 	 	 	printf("\n ---{ Registro }--- \n");
 			printf("\n Essa opção não existe! \n"); 
 	 	 	printf("\n");
 	 		system("pause");
-	 	 break;
+	 	break;
 	}
 	//fim das opçoes
 }
@@ -222,7 +222,7 @@ int registro(){
  	
  	//laucher mostrando os dados do registro   
  	printf("\n ---{ Consulta }--- \n");
- 	printf("\n Essas são as informações do registro: \n");
+ 	printf("\n Essas são as informações do registro: \n\n");
 
  	//criando while e convertendo o file para o char conteudo
  	while(fgets(conteudo, 250, file) != NULL){
@@ -237,7 +237,7 @@ int registro(){
 	 
 	// laucher pergutando se quer fazer outra consulta
 	printf("\n ---{ Consulta }--- \n"); //Cabesario da aplicação
-	printf("\n Desejada fazer outra consulta: \n"); //Escolha de Opçoes
+	printf("\n Desejada fazer outra consulta? \n\n"); //Escolha de Opçoes
 	    
 	//inicio das opçoes
  	printf(" # 1- Fazer outra consulta \n"); 
@@ -259,7 +259,7 @@ int registro(){
 	    case 2:
 	     	main();
 	 	 break;
-	 	   
+	 	 	   
 	 	 default: 
 	 	 	printf("\n ---{ Consulta }--- \n");
 			printf("\n Essa opção não existe! \n"); 
@@ -329,7 +329,7 @@ int deletar(){
   
    //lanucher para deletar registro
    printf("\n ---{ Deletar }--- \n");
-   printf("\n Essas são as informações que deseja deletar? \n");
+   printf("\n Essas são as informações que deseja deletar? \n\n");
  
    //criando while e convertendo o file para o char conteudo
    while(fgets(conteudo, 250, file) != NULL){
@@ -375,7 +375,7 @@ int deletar(){
 	 
 	//laucher para perguntar se quer deletar outro nome
 	printf("\n ---{ Deletar }--- \n"); //Cabesario da aplicação
-	printf("\n Desejada fazer outro delete: \n"); //Escolha de Opçoes
+	printf("\n Desejada fazer outro delete? \n\n"); //Escolha de Opçoes
 	    
 	//inicio das opçoes
  	printf(" # 1- Fazer outro delete \n"); 
@@ -399,6 +399,7 @@ int deletar(){
 	 	 break;
 	 	   
 	 	 default: 
+	 	 	printf("\n ---{ Deletar }--- \n");
 			printf("\n Essa opção não existe! \n"); 
 	 	 	printf("\n");
 	 		system("pause");
@@ -419,13 +420,13 @@ int main(){
 	    setlocale(LC_ALL, "Portuguese"); //Definindo os caracteris da linguagem portuguesa-br
 	 
 	    printf("\n ---{ Cartório de Registros }--- \n"); //Cabesario da aplicação
-	    printf("\n Escolha a opção desejada: \n"); //Escolha de Opçoes
+	    printf("\n Escolha a opção desejada: \n\n"); //Escolha de Opçoes
 	    
 	    //inicio das opçoes
  	    printf(" # 1- Fazer registro \n"); 
 	    printf(" # 2- Consultar registro \n"); 
 	    printf(" # 3- Deletar registro \n"); 
-	    printf(" # 4- Sair \n"); 
+	    printf(" # 4- Sair do sistema \n\n"); 
 	    //fim das opçoes
 	     
 	    printf(" Opção: ");
@@ -450,7 +451,7 @@ int main(){
 	 	    
 	 	    case 4:
 	 	    	printf("\n ---{ Cartório de Registros }--- \n"); 
-	 	    	printf("\n Obrigado por ultilizar o sitema! \n\n");
+	 	    	printf("\n Obrigado por ultilizar o sitema! \n");
 	 	    	return 0;
 	 	    break;
 	 	    
