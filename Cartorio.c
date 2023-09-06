@@ -148,11 +148,11 @@ int registro(){
 	 	
 	 	case 1: 
          	registro();
-         	main();
+         	return 0;
 	    break;
 		   
 	    case 2:
-	     	main();
+	     	return 0;
 	 	break;
 	 	   
 	 	default: 
@@ -203,11 +203,11 @@ int registro(){
 	 	
 	 		case 1: 
          		consultar();
-         		main();
+         		return 0;
 	    	break;
 		   
 	    	case 2:
-	     		main();
+	     		return 0;
 	 	 	break;
 	 	   
 	 	 	default: 
@@ -253,11 +253,11 @@ int registro(){
 	 	
 	 	case 1: 
          	consultar();
-         	main();
+         	return 0;
 	    break;
 		   
 	    case 2:
-	     	main();
+	     	return 0;
 	 	 break;
 	 	 	   
 	 	 default: 
@@ -310,11 +310,11 @@ int deletar(){
 	    	
 	    	case 1: 
             	deletar();
-            	main();
+            	return 0;
 	 	    break;
 	 	   
 	 	    case 2:
-	 	    	main();
+	 	    	return 0;
 	 	    break;
 	 	   
 	 	    default: 
@@ -391,11 +391,11 @@ int deletar(){
 	 	
 	 	case 1: 
          	deletar();
-         	main();
+         	return 0;
 	    break;
 		   
 	    case 2:
-	     	main();
+	     	return 0;
 	 	 break;
 	 	   
 	 	 default: 
