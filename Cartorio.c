@@ -189,6 +189,7 @@ int registro(){
  
 	//criando if caso nao encontemos o registro
  	if(file == NULL){
+ 		fclose(file);
  		system("cls");
  		printf("\n ---{ Consulta }--- \n");
  		printf("\n Não foi possivel localizar o registro!");
@@ -228,7 +229,8 @@ int registro(){
  	while(fgets(conteudo, 250, file) != NULL){
  		printf("%s", conteudo);
  	}
- 
+ 	fclose(file);
+ 	
  	printf("\n\n");
  	system("pause");
  	//fim do laucher
